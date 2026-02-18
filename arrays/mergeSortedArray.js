@@ -38,7 +38,8 @@ let m = 3;
 let nums2 = [1, 2, 3, 0, 0, 0];
 let n = 3;
 
-merge(nums1, m, nums2, n);
+// merge(nums1, m, nums2, n);
+// console.log("After merge:", nums1);
 merge2(nums1, m, nums2, n);
+console.log("After merge2:", nums1);
 
-console.log(nums1);
