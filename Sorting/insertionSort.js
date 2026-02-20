@@ -3,17 +3,17 @@ function InsertionSort (a){
 
     for( let i = 1; i < n; i++){
         curr = a[i]; // current element
-        let p = i - 1; // Declaring previous element 
+        let prev = i - 1; // Declaring previous element 
         console.log(a)
-        console.log("curr = " + curr + " p = " + p);
+        console.log("curr = " + curr + " prev = " + prev);
 
-        while ( a[p] > curr && p >= 0){
-            a[p + 1] = a[p];
-            p--;
+        while ( a[prev] > curr && prev >= 0){
+            a[prev + 1] = a[prev];
+            prev--;
             console.log(a);
-            console.log("curr = " + curr + " p = " + p);
+            console.log("curr = " + curr + " prev = " + prev);
         }
-        a[p + 1] = curr;
+        a[prev + 1] = curr;
         console.log(a);
     }
     return a;
