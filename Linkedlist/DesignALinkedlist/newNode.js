@@ -1,5 +1,6 @@
 function Node(val) {
     this.val = val;
+    this.size = 0;
     this.next = null;
     console.log("Created node with value: " + this.val);
 
