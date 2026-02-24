@@ -11,3 +11,18 @@ function linkListCycle(head) {
     }
     return false;
 }
+
+//Using Floyd’s Cycle Detection Algorithm
+function linkListCycleUsinfFloyd(head){
+    if(!head) return false;
+    let slow = head;
+    let fast = head.next;
+
+    while ( fast !== slow ){
+        if(! fast || !fast.next ) return false;
+
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return true;
+} 
