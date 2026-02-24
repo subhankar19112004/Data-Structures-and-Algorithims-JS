@@ -1,3 +1,4 @@
+//Using Hashing = space complexity : O(n) and Time complexity : O(n)
 function linkListCycle(head) {
     let set = new Set();
     let curr = head;
@@ -12,7 +13,7 @@ function linkListCycle(head) {
     return false;
 }
 
-//Using Floyd’s Cycle Detection Algorithm
+//Using Floyd’s Cycle Detection Algorithm = space complexity : O(1) and Time complexity : O(n)
 function linkListCycleUsinfFloyd(head){
     if(!head) return false;
     let slow = head;
