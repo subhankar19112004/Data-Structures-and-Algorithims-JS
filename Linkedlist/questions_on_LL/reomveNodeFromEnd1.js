@@ -1,5 +1,5 @@
 
-//Removing a node from a a given singly linked list from the end of the list.( this solution is one pass solution)
+//Removing a node from a a given singly linked list from the end of the list.( this solution is two pass solution)
 const reomveNodeFromEnd1 = (head, n) => {
 
     //creating a sentinel node to handle edge cases like removing the head node
