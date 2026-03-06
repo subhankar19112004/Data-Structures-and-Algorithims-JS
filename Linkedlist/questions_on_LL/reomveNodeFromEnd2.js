@@ -3,7 +3,8 @@ const reomveNodeFromEnd2 = (head, n) => {
     let sentinel = new ListNode();
     sentinel.next = head;
 
-    // we will use two pointers to traverse the linked list. the first pointer will be n nodes ahead of the second pointer. when the first pointer reaches the end of the list, the second pointer will be at the node to be removed.
+    // we will use two pointers to traverse the linked list. the first pointer will be n nodes ahead of the second pointer. 
+    // when the first pointer reaches the end of the list, the second pointer will be at the node to be removed.
     let first = sentinel;
     let second = sentinel;
     for (let i = 0; i < n; i++) {
