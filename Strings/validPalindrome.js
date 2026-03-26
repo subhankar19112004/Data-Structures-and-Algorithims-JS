@@ -13,3 +13,17 @@ const validPalindrome = (s) => {
     let rev = filteredString.split("").reverse().join("");
     return rev == filteredString;
 }
+
+// Approach-2: Build the filtered string and its reverse in a single pass.
+const validPalindrome1 = (s) => {
+    s = s.toLowerCase();
+    let filteredString = "";
+    let rev = "";
+    for(let i = 0; i < s.length; i++){
+        if(s[i].match(/[a-z0-9]/i)){
+            filteredString += s[i];
+            rev = s[i] + rev;
+        }
+    }
+    return rev == filteredString;
+}
