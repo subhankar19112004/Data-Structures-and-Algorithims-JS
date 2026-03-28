@@ -7,6 +7,9 @@ function bubbleSort(arr) {
         console.log(arr)
         for (let j = 0; j < n - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) {
+                console.log(arr[j], arr[j + 1])
+                console.log(j, j + 1) 
+
                 let temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
