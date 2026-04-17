@@ -4,7 +4,9 @@ function ListNode(val, next) {
   }
 
 
-  // Adding two numbers represented by two linked lists. the digits are stored in reverse order and each of their nodes contains a single digit. we will add the two numbers and return the sum as a linked list.
+  // Adding two numbers represented by two linked lists. 
+  // the digits are stored in reverse order and each of their nodes contains a single digit. 
+  // we will add the two numbers and return the sum as a linked list.
   const addTwoNumbers = (l1, l2) => {
     // we will use a dummy node to store the result of the addition of the two linked lists. we will also use a carry variable to store the carry of the addition of the two digits.
     let ans = new ListNode();
