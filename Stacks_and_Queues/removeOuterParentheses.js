@@ -28,6 +28,32 @@ const removeOuterParentheses = (s) => {
     return ans;
 }
 
+// Approach 2: Using Count
+const removeOuterParentheses2 = (s) => {
+    let count = 0;
+    let ans = "";
+
+    for(let i = 0; i < s.length; i++){
+        if(s[i] == "("){
+            count++;
+            if(count > 1){
+                ans = ans + s[i];
+            }
+        } else {
+            count--;
+            if(count >= 1){
+                ans = ans + s[i];
+            }
+        }
+    }
+
+    return ans;
+}
+
 console.log(removeOuterParentheses("(()())(())"));
 console.log(removeOuterParentheses("(()())(())(()(()))"));
 console.log(removeOuterParentheses("()()")); 
+
+console.log(removeOuterParentheses2("(()())(())"));
+console.log(removeOuterParentheses2("(()())(())(()(()))"));
+console.log(removeOuterParentheses2("()()"));
