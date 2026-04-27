@@ -28,6 +28,35 @@ const removeGreaterEl2 = (nums) => {
     return ans.slice(0, n/2);
 }
 
+// Aproach 2 : by using the stack and iterating the array twice but not creating another instead by incresing the i value
+//  to find the next greater element for each element in the original array.
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var nextGreaterElements = function(arr) {
+
+    let n = arr.length;
+    let ans = new Array(n).fill(-1);
+    let stack = [];
+    stack.push(arr[n - 1]);
+
+    for(let i = (2 * n) - 2; i >= 0; i--){
+        while(stack.length){
+            let top = stack[stack.length - 1];
+            if(arr[i % n] < top){
+                ans[i % n] = top;
+                break;
+            } else {
+                stack.pop();
+            }
+        }
+        stack.push(arr[i % n])
+    }
+    return ans.slice(0, n);
+};
+
 console.log(removeGreaterEl2([4, 1, 2]));
 console.log(removeGreaterEl2([2, 4]));
 console.log(removeGreaterEl2([1, 3, 5, 2, 4]));
