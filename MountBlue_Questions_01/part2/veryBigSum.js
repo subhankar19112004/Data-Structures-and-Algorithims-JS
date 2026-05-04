@@ -1,4 +1,4 @@
-// HackerRank - A Very Big Sum
+// HackerRank - A Very Big Sum....
 // Given an array of integers, calculate the sum of its elements. 
 // Note: The numbers in the array can be very large, so you should use a 64-bit integer type.
 
