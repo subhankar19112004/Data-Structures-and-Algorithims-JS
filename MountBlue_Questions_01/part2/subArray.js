@@ -12,7 +12,7 @@ const subArray = (s, d, m) => {
         for(let j = 0; j < m; j++){
             sum = sum + s[i + j];
         }
-        if(sum === d)count++;
+        if(sum === d)count++;   
     }
     return count;
 }
