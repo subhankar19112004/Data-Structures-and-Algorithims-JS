@@ -24,6 +24,6 @@ const minimumInSortedArray = (arr) => {
 }
 
 // Test cases
-console.log(minimumInSortedArray([3, 4, 5, 1, 2]));
-console.log(minimumInSortedArray([4, 5, 6, 7, 0, 1, 2]));
-console.log(minimumInSortedArray([11, 13, 15, 17]));
+console.log(minimumInSortedArray([3, 4, 5, 1, 2])); // Output: 1
+console.log(minimumInSortedArray([4, 5, 6, 7, 0, 1, 2])); // Output: 0
+console.log(minimumInSortedArray([11, 13, 15, 17])); // Output: 11
