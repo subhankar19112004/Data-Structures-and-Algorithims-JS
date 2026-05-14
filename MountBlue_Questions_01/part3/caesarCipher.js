@@ -1,4 +1,4 @@
-// HackerRank - Caesar Cipher
+//  HackerRank - Caesar Cipher
 // Julius Caesar protected his confidential information by encrypting it using a cipher. 
 // Caesar's cipher shifts each letter by a number of letters.
 // Given a string, s, and a number, k, encrypt the string using Caesar's cipher. Then print the encrypted string.
