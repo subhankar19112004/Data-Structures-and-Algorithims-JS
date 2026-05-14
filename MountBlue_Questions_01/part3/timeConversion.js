@@ -28,4 +28,4 @@ function timeConversion(s) {
 // Test cases
 console.log(timeConversion("07:05:45PM")); // Output: "19:05:45"
 console.log(timeConversion("12:00:00AM")); // Output: "00:00:00"
-console.log(timeConversion("12:00:00PM")); // Output: "12:00:00"
+console.log(timeConversion("12:00:00PM")); // Output: "12:00:0
