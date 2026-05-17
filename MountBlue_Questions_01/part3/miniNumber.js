@@ -13,7 +13,7 @@
 // special_characters = "!@#$%^&*()-+"
 
 function minimumNumber(n, password) {
-    // Return the minimum number of characters to make the password strongo
+    // Return the minimum number of characters to make the password strong
     let hasDigit = false;
     let hasLower = false;
     let hasUpper = false;
@@ -50,3 +50,6 @@ console.log(minimumNumber(11, "#HackerRank")); // Output: 1
 console.log(minimumNumber(4, "4700")); // Output: 3
 console.log(minimumNumber(6, "Aa1!Gh")); // Output: 0
 console.log(minimumNumber(5, "abcde")); // Output: 3
+console.log(minimumNumber(7, "1234567")); // Output: 3
+console.log(minimumNumber(8, "ABCDEFGH")); // Output: 3
+console.log(minimumNumber(9, "aB1!cD2@")); // Output: 0
