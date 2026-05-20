@@ -43,3 +43,4 @@ console.log(jumpingOnClouds([0, 0, 0, 0, 0], 2)); // Expected output: 95
 console.log(jumpingOnClouds([1, 0, 1, 0, 1, 0], 2)); // Expected output: 91
 console.log(jumpingOnClouds([0, 1, 0, 1, 0, 1], 2)); // Expected output: 97
 console.log(jumpingOnClouds([0, 0, 0, 1, 0, 0], 3)); // Expected output: 96
+console.log(jumpingOnClouds([0, 1, 1, 1, 0, 1], 2)); // Expected output: 95
