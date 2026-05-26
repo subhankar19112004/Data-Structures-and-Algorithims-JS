@@ -24,6 +24,8 @@ const circularArrayRotation = (arr, k, queries) => {
     let rotated = new Array(n);
 
     for(let i = 0; i < arr.length; i++){
+        // Calculate the new index for each element after k rotations
+        // using modulo to wrap around the array
         let newIndex = (i + k) % n;
 
         rotated[newIndex] = arr[i];
