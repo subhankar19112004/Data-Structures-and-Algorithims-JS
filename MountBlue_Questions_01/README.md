@@ -1,11 +1,6 @@
 # 🚀 MountBlue DSA Journey
 
 > A complete collection of my MountBlue coding journey, problem-solving practice, interview preparation, and software engineering growth.
-
-![GitHub repo size](https://img.shields.io/github/repo-size/YOUR_USERNAME/YOUR_REPO)
-![GitHub last commit](https://img.shields.io/github/last-commit/YOUR_USERNAME/YOUR_REPO)
-![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO?style=social)
-
 ---
 
 # 📌 About This Repository
