@@ -204,7 +204,6 @@ Based on candidate reviews and company information, MountBlue engineers often wo
 ---
 
 # 📂 Repository Structure
-
 ```
 └── 📁MountBlue_Questions_01
     └── 📁part1
@@ -257,8 +256,10 @@ Based on candidate reviews and company information, MountBlue engineers often wo
         ├── circularArrayRotation.js
         ├── equalizeArray.js
         ├── gridChallenge.js
+        ├── halloweenSale.js
         ├── minimumDistances.js
         ├── separateNumbers.js
         ├── squares.js
+        ├── theLoveLetterMystery.palindrome.js
     └── README.md
 ```
