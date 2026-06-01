@@ -261,5 +261,10 @@ Based on candidate reviews and company information, MountBlue engineers often wo
         ├── separateNumbers.js
         ├── squares.js
         ├── theLoveLetterMystery.palindrome.js
+    └── 📁part6
+        ├── alternateCharacters.js
+        ├── beautifulBinaryString.js
+        ├── maxPerimeterTriangle.js
+        ├── pangrams.js
     └── README.md
 ```
