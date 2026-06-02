@@ -9,7 +9,8 @@
 // Output: -1
 // Explanation : "bba" does not occur in "aaaaa", so we return -1.
 
-// Approach 1: Using slice method to check each substring of the haystack with the needle. Time complexity is O(n * m) where n is the length of haystack and m is the length of needle.
+// Approach 1: Using slice method to check each substring of the haystack with the needle. 
+// Time complexity is O(n * m) where n is the length of haystack and m is the length of needle.
 const stringOccurence = (arr, needle) => {
     let n = arr.length;
     let s = needle.length;
@@ -24,6 +25,24 @@ const stringOccurence = (arr, needle) => {
     return -1;
 }
 
+// Approach 2: Using two pointers to check each character of the haystack with the needle. 
+// Time complexity is O(n * m) where n is the length of haystack and m is the length of needle.
+const stringOccurence2 = (arr, needle) => {
+    let n = arr.length;
+    let s = needle.length;
+
+    for(let i = 0; i <= n - s; i++) {
+        let j = 0;
+        for(j = 0; j < s; j++){
+            if(arr[i + j] !== needle[j]) {
+                break;
+            }
+        }
+        if(j === s) return i;
+    }
+    return -1;
+}
+
 
 
 // Same Test cases for both
@@ -33,5 +52,14 @@ console.log(stringOccurence("hello world", "world")); // 6
 console.log(stringOccurence("hello world", "hello")); // 0
 console.log(stringOccurence("hello world", "o w")); // 4
 console.log(stringOccurence("hello world", "abc")); // -1
+
+console.log("-------------------------------------------");
+
+
+console.log("Using second approach");
+console.log(stringOccurence2("hello world", "world")); // 6
+console.log(stringOccurence2("hello world", "hello")); // 0
+console.log(stringOccurence2("hello world", "o w")); // 4
+console.log(stringOccurence2("hello world", "abc")); // -1
 
 
