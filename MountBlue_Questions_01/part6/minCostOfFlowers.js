@@ -7,7 +7,8 @@
 // Given the number of friends, k, and a list of costs for each flower, c, find and print the minimum cost to purchase all of the flowers.
 
 const minCostOfFlowers = (c, k) => {
-    c.sort((a, b) => b - a); // Sort the costs in descending order
+    // Sort the costs in descending order
+    c.sort((a, b) => b - a); 
     let totalCost = 0;
 
     for(let i = 0; i < c.length; i++){
