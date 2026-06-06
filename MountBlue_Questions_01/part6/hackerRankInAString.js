@@ -17,13 +17,14 @@ const hackerRankInAString = (s) => {
         if (s[i] === target[pointer]) {
             pointer++;
         }
+        if (pointer === target.length) {
+            return "YES";
+        }
     }
     // Check if we have found all characters in "hackerrank"
     // If pointer equals the length of target, it means we found all characters in order
     // Return "YES" if all characters were found, otherwise return "NO"
-    if (pointer === target.length) {
-        return "YES";
-    }
+
     return "NO";
 }
 
