@@ -2,7 +2,6 @@
 // ALice has a binary string. She thinks a binary string is beautiful if it doesn't contain the substring "010". 
 // In one step, Alice can change a '0' to a '1' or vice versa. Given a binary string, 
 // determine the minimum number of steps needed to make the string beautiful.
-
 // Binary String - A string consisting of only '0's and '1's.
 // Substring - A contiguous sequence of characters within a string.
 
