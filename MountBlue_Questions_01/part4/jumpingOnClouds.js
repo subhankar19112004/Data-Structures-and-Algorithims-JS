@@ -25,6 +25,8 @@ const jumpingOnClouds = (c, k) => {
   // to jump from the starting cloud and check the energy after the first jump.
   // The loop will continue until we return to the starting cloud (position 0).
   do {
+    // Why using %n : to ensure that the position wraps around to the beginning of the array 
+    // when it exceeds the length of the array.
     position = (position + k) % n;
 
     energy -= 1;
