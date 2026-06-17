@@ -12,7 +12,8 @@ const chocolateFeast = (n, c, m) => {
     let totalBars = Math.floor(n / c);
     let wrappers = totalBars;;
 
-    while(wrappers >= m) {
+    while (wrappers >= m) {
+        
         let freeChocolates = Math.floor(wrappers / m);
         totalBars += freeChocolates;
 
