@@ -16,12 +16,12 @@ const plusMinus = (arr) => {
             equal++;
         }
     }
-    return [
-        (positive/n).toFixed(6),
-        (negative/n).toFixed(6),
-        (equal/n).toFixed(6)
-    ]
+    console.log((positive / n).toFixed(6));
+    console.log((negative / n).toFixed(6));
+    console.log((equal / n).toFixed(6));
 }
 
 console.log(plusMinus([-4, 3, -9, 0, 4, 1])); // ['0.500000', '0.333333', '0.166667']
+
+console.log("-------------------")
 console.log(plusMinus([1, 2, 3, -1, -2, -3, 0, 0])); // ['0.375000', '0.375000', '0.250000']
