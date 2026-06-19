@@ -28,22 +28,29 @@ function acmTeam(people) {
   let maxScore = 0;
   let maxTeams = 0;
 
+  // The outer loop iterates through each person, and the inner loop iterates through the remaining people to form pairs.
+  // this takes the first person and pairs them with every other person that comes after them in the list.
   for (let i = 0; i < people.length; i++) {
+    // The inner loop starts from the next person (i + 1) to avoid pairing the same person with themselves and to avoid duplicate pairs.
     for (let j = i + 1; j < people.length; j++) {
-      let currentTeamScore = 0;
+      let currentTeamScore = 0; // Initialize the score for the current team to 0.
+      // The innermost loop iterates through each topic (represented by the characters in the binary strings) to count how many topics the current pair knows.
       for (let k = 0; k < people[i].length; k++) {
+        // If either person knows the topic (indicated by '1'), increment the current team score.
         if (people[i][k] == "1" || people[j][k] == "1") {
           currentTeamScore++;
         }
       }
+      // After calculating the score for the current team, compare it with the maximum score found so far.
       if (currentTeamScore > maxScore) {
         maxScore = currentTeamScore;
         maxTeams = 1;
-      } else if (currentTeamScore === maxScore) {
+      } else if (currentTeamScore === maxScore) { // If the current team score equals the maximum score, increment the count of teams that have this maximum score.
         maxTeams++;
       }
     }
   }
+  // Finally, return an array containing the maximum score and the number of teams that achieved this score.
   return [maxScore, maxTeams];
 }
 
