@@ -5,7 +5,7 @@
 // 1. All elements in array a are factors of x (i.e., x % a[i] == 0 for all i).
 // 2. x is a factor of all elements in array b (i.e., b[j] % x == 0 for all j).
 
-//Approach 1: Brute Force
+//Approach 1: Brute Force 01
 const betweenTwoSets = (a, b) => {
   let count = 0;
   let left = Math.max(...a);
