@@ -51,3 +51,4 @@ function taumBday(b, w, bc, wc, z) {
 // Test cases
 console.log(taumBday(10, 10, 1, 1, 1));
 console.log(taumBday(5, 9, 2, 3, 1));
+console.log(taumBday(6, 10, 3, 4, 2));
