@@ -10,6 +10,8 @@
 //      /
 //     3
 
+// Process : Root -> Left -> Right
+
 
 //Definition for a binary tree node.
 function TreeNode(val, left, right) {
