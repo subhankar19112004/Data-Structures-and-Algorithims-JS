@@ -39,6 +39,25 @@ var preorderTraversal = function (root) {
   return ans;
 };
 
+// Iterative approach
+const PreorderTraversal = function (root) {
+  if(!root) return [];
+  let ans = [];
+  let stack = [root];
+
+  while (stack.length) {
+    let curr = stack.pop();
+    
+    ans.push(curr.val);
+    curr.right && stack.push(curr.right);
+    curr.left && stack.push(curr.left);
+  }
+  return ans;
+}
+
 // Test case
 const root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
 console.log(preorderTraversal(root)); // Output: [1, 2, 3]
+console.log(PreorderTraversal(root)); // Output: [1, 2, 3]
+
+
