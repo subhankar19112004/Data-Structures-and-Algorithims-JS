@@ -38,6 +38,29 @@ const inOrderTraversal = (root) => {
   return ans;
 };
 
+
+// Iterative Approach
+const inorderTraversal = function (root) {
+  if (!root) return [];
+  
+  let ans = [];
+  let stack = [];
+  let curr = root;
+
+  while (curr || stack.length) {
+    while (curr) {
+      stack.push(curr);
+      curr = curr.left;
+    }
+
+    curr = stack.pop();
+    ans.push(curr.val);
+    curr = curr.right;
+  }
+  return ans;
+}
+
 // Test case
 const root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
+console.log(inOrderTraversal(root)); // Output: [1, 3, 2]
 console.log(inOrderTraversal(root)); // Output: [1, 3, 2]
