@@ -60,6 +60,13 @@ const inorderTraversal = function (root) {
   return ans;
 }
 
+// Understanding the iterative approach:
+// 1. Initialize an empty stack and set the current node to the root.
+// 2. While there are nodes to process (either the current node is not null or the stack is not empty):
+//    a. Traverse to the leftmost node of the current subtree, pushing each node onto the stack.
+//    b. Once you reach a null left child, pop a node from the stack, add its value to the result array, and set the current node to its right child.
+// 3. Repeat until all nodes have been processed and return the result array containing the inorder traversal of the tree.
+
 // Test case
 const root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
 console.log(inOrderTraversal(root)); // Output: [1, 3, 2]
