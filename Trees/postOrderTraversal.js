@@ -36,6 +36,28 @@ const postOrderTraversl = function (root) {
   return ans;
 };
 
+// Iterative Approach
+const postorderTraversal = (root) => {
+  if (!root) return [];
+  const stack1 = [root];
+  const stack2 = [];
+  const ans = [];
+
+  while (stack1.length) {
+    let curr = stack1.pop();
+    stack2.push(curr);
+
+    curr.left && stack1.push(curr.left);
+    curr.right && stack1.push(curr.right);
+  }
+
+  while (stack2.length) {
+    ans.push(stack2.pop().val);
+  }
+  return ans;
+};
+
 // Test case
 const root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
 console.log(postOrderTraversl(root)); // Output: [3, 2, 1]
+console.log(postorderTraversal(root)); // Output: [3, 2, 1]
