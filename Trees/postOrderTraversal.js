@@ -57,7 +57,33 @@ const postorderTraversal = (root) => {
   return ans;
 };
 
+// Iterative Approach using one stack
+const PostorderTraversal = (root) => {
+  if (!root) return [];
+  let curr = root;
+  let lastVisited = null;
+  let stack = [];
+  let ans = [];
+
+  while (curr || stack.length) {
+    while (curr) {
+      stack.push(curr);
+      curr = curr.left;
+    }
+    let peekNode = stack[stack.length - 1];
+
+    if (peekNode.right && peekNode.right !== lastVisited) {
+      curr = peekNode.right;
+    } else {
+      ans.push(peekNode.val);
+      lastVisited = stack.pop();
+    }
+  }
+  return ans;
+};
+
 // Test case
 const root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
 console.log(postOrderTraversl(root)); // Output: [3, 2, 1]
 console.log(postorderTraversal(root)); // Output: [3, 2, 1]
+console.log(PostorderTraversal(root)); // Output: [3, 2, 1]
