@@ -23,7 +23,8 @@ function TreeNode(val, left, right) {
  * @return {number[]}
  */
 
-const postOrderTraversl = function (root) {
+// Recursive Approach
+const postOrderTraversal = function (root) {
   let ans = [];
 
   function traversal(curr) {
@@ -84,6 +85,6 @@ const PostorderTraversal = (root) => {
 
 // Test case
 const root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
-console.log(postOrderTraversl(root)); // Output: [3, 2, 1]
+console.log(postOrderTraversal(root)); // Output: [3, 2, 1]
 console.log(postorderTraversal(root)); // Output: [3, 2, 1]
 console.log(PostorderTraversal(root)); // Output: [3, 2, 1]
