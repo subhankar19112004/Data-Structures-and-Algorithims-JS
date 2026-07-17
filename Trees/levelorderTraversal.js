@@ -42,6 +42,23 @@ const levelorderTraversal = (root) => {
     return ans;
 }
 
+
+// Recursive approach for level order traversal of a binary tree
+const levelOrderTraversal = (root) => {
+    if (!root) return [];
+    let ans = [];
+
+    function traversal(curr, level) {
+        if(!ans[level]) ans[level] = [];
+        ans[level].push(curr.val);
+        curr.left && traversal(curr.left, level + 1);
+        curr.right && traversal(curr.right, level + 1);
+    }
+    traversal(root, 0);
+    return ans;
+}
+
 // Test cases for example 2
 const root = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, null, new TreeNode(6)));
 console.log(levelorderTraversal(root)); // Output: [[1],[2,3],[4,5,6]]
+console.log(levelOrderTraversal(root)); // Output: [[1],[2,3],[4,5,6]]
