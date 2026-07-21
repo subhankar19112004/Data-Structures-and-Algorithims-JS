@@ -46,6 +46,22 @@ const hasPathSum = (root, targetSum) => {
     return ans;
 }
 
+// Bottom-up approach for finding if a path sum exists in a binary tree
+const hasPathSumBottomUp = (root, targetSum) => {
+    if (!root) return false;
+
+    if (!root.left && !root.right) {
+        if(targetSum == root.val) {
+            return true;
+        }
+    }
+
+    let leftSum = hasPathSumBottomUp(root.left, targetSum - root.val);
+    let rightSum = hasPathSumBottomUp(root.right, targetSum - root.val);
+
+    return leftSum || rightSum;
+}    
+
 // Test cases
 const root1 = new TreeNode(5, 
     new TreeNode(4,
@@ -57,3 +73,4 @@ const root1 = new TreeNode(5,
 const targetSum1 = 22;
 
 console.log(hasPathSum(root1, targetSum1)); // Output: true
+console.log(hasPathSumBottomUp(root1, targetSum1)); // Output: true
