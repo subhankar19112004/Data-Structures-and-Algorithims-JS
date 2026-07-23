@@ -45,6 +45,24 @@ var isSymmetric = function (root) {
   return isMirror(root.left, root.right);
 };
 
+// Iterative approach using a queue
+var isSymmetricIterative = function (root) { 
+  let queue = [root.left, root.right];
+
+  while (queue.length) {
+    let p1 = queue.shift();
+    let p2 = queue.shift();
+
+    if (p1 == null && p2 == null) continue;
+
+    if ((p1 == null || p2 == null) || p1.val !== p2.val) return false;
+
+    queue.push(p1.left, p2.right);
+    queue.push(p1.right, p2.left);
+  }
+  return true;
+}
+
 // Test cases
 const root1 = new TreeNode(1, 
     new TreeNode(2, new TreeNode(3), new TreeNode(4)), 
@@ -58,3 +76,5 @@ const root2 = new TreeNode(1,
 
 console.log(isSymmetric(root1)); // Output: true
 console.log(isSymmetric(root2)); // Output: false
+console.log(isSymmetricIterative(root1)); // Output: true
+console.log(isSymmetricIterative(root2)); // Output: false
