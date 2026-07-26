@@ -15,8 +15,6 @@
 //    /  \      \
 //   7    2      1
 
-
-
 // Tree repesentation in JS
 function TreeNode(val, left, right) {
   this.val = val === undefined ? 0 : val;
@@ -24,51 +22,48 @@ function TreeNode(val, left, right) {
   this.right = right === undefined ? null : right;
 }
 
-
 // Top-down approach for finding if a path sum exists in a binary tree
 const hasPathSum = (root, targetSum) => {
-    if(!root) return false;
-    let ans = false;
+  if (!root) return false;
+  let ans = false;
 
-    const traversal = (curr, currSum) => {
-        let newSum = curr.val + currSum;
+  const traversal = (curr, currSum) => {
+    let newSum = curr.val + currSum;
 
-        if (!curr.left && !curr.right) {
-            if (newSum === targetSum) {
-                ans = ans || true;
-            }
-        }
-
-        curr.left && traversal(curr.left, newSum);
-        curr.right && traversal(curr.right, newSum);
+    if (!curr.left && !curr.right) {
+      if (newSum === targetSum) {
+        ans = ans || true;
+      }
     }
-    traversal(root, 0);
-    return ans;
-}
+
+    curr.left && traversal(curr.left, newSum);
+    curr.right && traversal(curr.right, newSum);
+  };
+  traversal(root, 0);
+  return ans;
+};
 
 // Bottom-up approach for finding if a path sum exists in a binary tree
 const hasPathSumBottomUp = (root, targetSum) => {
-    if (!root) return false;
+  if (!root) return false;
 
-    if (!root.left && !root.right) {
-        if(targetSum == root.val) {
-            return true;
-        }
+  if (!root.left && !root.right) {
+    if (targetSum == root.val) {
+      return true;
     }
+  }
 
-    let leftSum = hasPathSumBottomUp(root.left, targetSum - root.val);
-    let rightSum = hasPathSumBottomUp(root.right, targetSum - root.val);
+  let leftSum = hasPathSumBottomUp(root.left, targetSum - root.val);
+  let rightSum = hasPathSumBottomUp(root.right, targetSum - root.val);
 
-    return leftSum || rightSum;
-}    
+  return leftSum || rightSum;
+};
 
 // Test cases
-const root1 = new TreeNode(5, 
-    new TreeNode(4,
-        new TreeNode(11, new TreeNode(7), new TreeNode(2)), 
-        null
-    ), 
-    new TreeNode(8, new TreeNode(13), new TreeNode(4, null, new TreeNode(1)))
+const root1 = new TreeNode(
+  5,
+  new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2)), null),
+  new TreeNode(8, new TreeNode(13), new TreeNode(4, null, new TreeNode(1))),
 );
 const targetSum1 = 22;
 
