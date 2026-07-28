@@ -17,6 +17,7 @@ function TreeNode(val, left, right) {
   this.right = right === undefined ? null : right;
 }
 
+// Iterative approach using BFS
 const zigzagLevelOrder = (root) => {
   if (!root) return [];
 
@@ -46,6 +47,27 @@ const zigzagLevelOrder = (root) => {
   return ans;
 };
 
+// Recursive approach using DFS
+var zigzagLevelOrderR = function (root) {
+  if (!root) return [];
+  let ans = [];
+
+  function traversal(curr, level) {
+    if (!ans[level]) ans[level] = [];
+
+    if (level % 2 == 0) {
+      ans[level].push(curr.val);
+    } else {
+      ans[level].unshift(curr.val);
+    }
+
+    curr.left && traversal(curr.left, level + 1);
+    curr.right && traversal(curr.right, level + 1);
+  }
+  traversal(root, 0);
+  return ans;
+};
+
 // Test cases for all examples
 const root1 = new TreeNode(
   3,
@@ -58,3 +80,7 @@ const root3 = null;
 console.log(zigzagLevelOrder(root1)); // Output: [[3],[20,9],[15,7]]
 console.log(zigzagLevelOrder(root2)); // Output: [[1]]
 console.log(zigzagLevelOrder(root3)); // Output: []
+
+console.log(zigzagLevelOrderR(root1)); // Output: [[3],[20,9],[15,7]]
+console.log(zigzagLevelOrderR(root2)); // Output: [[1]]
+console.log(zigzagLevelOrderR(root3)); // Output: []
