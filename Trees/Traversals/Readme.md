@@ -356,6 +356,234 @@ Output
 
 ---
 
+---
+
+# 🔀 5. Zig-Zag Level Order Traversal (Spiral Traversal)
+
+## Definition
+
+**Zig-Zag Level Order Traversal** is a variation of **Level Order Traversal (BFS)** where the direction of traversal changes after every level.
+
+- First Level → **Left → Right**
+- Second Level → **Right → Left**
+- Third Level → **Left → Right**
+- Fourth Level → **Right → Left**
+- ...and so on.
+
+It is also known as:
+
+- Spiral Traversal
+- Zig-Zag Traversal
+- Alternate Level Order Traversal
+
+Like normal Level Order Traversal, it uses **Breadth First Search (BFS)** with a **Queue**, but the order of storing each level is reversed on alternate levels.
+
+---
+
+## Example Tree
+
+```text
+                    1
+                  /   \
+                 2     3
+                / \     \
+               4   5     8
+                  / \   /
+                 6   7 9
+```
+
+---
+
+## Traversal Direction
+
+```text
+Level 1 : Left → Right
+Level 2 : Right → Left
+Level 3 : Left → Right
+Level 4 : Right → Left
+```
+
+---
+
+## Step-by-Step Traversal
+
+### Level 1 (Left → Right)
+
+```text
+        1
+```
+
+Output
+
+```text
+1
+```
+
+---
+
+### Level 2 (Right → Left)
+
+```text
+      2     3
+```
+
+Normally we visit:
+
+```text
+2 → 3
+```
+
+But Zig-Zag reverses it:
+
+```text
+3 → 2
+```
+
+---
+
+### Level 3 (Left → Right)
+
+```text
+    4   5     8
+```
+
+Output
+
+```text
+4 → 5 → 8
+```
+
+---
+
+### Level 4 (Right → Left)
+
+```text
+      6   7   9
+```
+
+Normally:
+
+```text
+6 → 7 → 9
+```
+
+Reverse it:
+
+```text
+9 → 7 → 6
+```
+
+---
+
+## Final Output
+
+```text
+1 → 3 → 2 → 4 → 5 → 8 → 9 → 7 → 6
+```
+
+Or as level-wise arrays:
+
+```text
+[
+  [1],
+  [3,2],
+  [4,5,8],
+  [9,7,6]
+]
+```
+
+---
+
+## Visual Representation
+
+```text
+                1
+              ↙   ↘
+
+           2       3
+             ↖   ↗
+
+        4    5     8
+          ↙       ↘
+
+          6   7    9
+```
+
+Traversal
+
+```text
+→ Level 1 : 1
+← Level 2 : 3 2
+→ Level 3 : 4 5 8
+← Level 4 : 9 7 6
+```
+
+---
+
+## Memory Trick
+
+```text
+Think of a Snake 🐍
+
+Level 1 →
+Level 2 ←
+Level 3 →
+Level 4 ←
+```
+
+The direction changes after every level.
+
+---
+
+## Time Complexity
+
+```text
+O(N)
+```
+
+Every node is visited exactly once.
+
+---
+
+## Space Complexity
+
+```text
+O(N)
+```
+
+Queue may contain an entire level in the worst case.
+
+---
+
+## Common Interview Uses
+
+- Binary Tree Zigzag Level Order Traversal (LeetCode 103)
+- Printing tree in spiral form
+- Alternate level processing
+- BFS variations
+
+---
+
+## Difference from Normal Level Order
+
+| Level | Normal Level Order | Zig-Zag |
+|-------|--------------------|---------|
+| 1 | 1 | 1 |
+| 2 | 2 → 3 | 3 → 2 |
+| 3 | 4 → 5 → 8 | 4 → 5 → 8 |
+| 4 | 6 → 7 → 9 | 9 → 7 → 6 |
+
+---
+
+## Key Observation
+
+> **The tree is traversed exactly like Level Order (BFS).**
+>
+> The only difference is that **every alternate level is reversed before storing or printing the result.**
+
+---
+
+
 # 🎯 Comparison of All Traversals
 
 | Traversal | Formula | Final Output |
@@ -442,3 +670,4 @@ Uses **Queue (FIFO)**.
 | Which traversal is useful for deleting a tree? | Postorder |
 | Which traversal is used for copying a tree? | Preorder |
 | Which traversal processes nodes level-wise? | Level Order |
+| Which traversal alternates direction every level? | Zig-Zag (Spiral) Level Order |
