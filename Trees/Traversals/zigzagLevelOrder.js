@@ -55,6 +55,9 @@ var zigzagLevelOrderR = function (root) {
   function traversal(curr, level) {
     if (!ans[level]) ans[level] = [];
 
+    // If the level is even, push the value to the end of the array, else unshift it to the front
+    // This will create the zigzag pattern
+    // Unshift : adds an element to the beginning of an array, shifting all other elements to the right.
     if (level % 2 == 0) {
       ans[level].push(curr.val);
     } else {
