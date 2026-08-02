@@ -43,7 +43,7 @@ const levelorderTraversal = (root) => {
 }
 
 
-// Recursive approach for level order traversal of a binary tree
+// Recursive approach for level order traversal of a binary tree 
 const levelOrderTraversal = (root) => {
     if (!root) return [];
     let ans = [];
