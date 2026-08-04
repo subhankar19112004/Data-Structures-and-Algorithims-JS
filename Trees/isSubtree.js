@@ -37,7 +37,12 @@ function serialization(root) {
   return hashed;
 }
 
-// Test cases
+// Test cases for all example cases
+
 const root1 = new TreeNode(3, new TreeNode(4, new TreeNode(1), new TreeNode(2)), new TreeNode(5));
 const subRoot1 = new TreeNode(4, new TreeNode(1), new TreeNode(2));
+
+const root2 = new TreeNode(3, new TreeNode(4, new TreeNode(1), new TreeNode(2, new TreeNode(0))), new TreeNode(5));
+const subRoot2 = new TreeNode(4, new TreeNode(1), new TreeNode(2));
 console.log(isSubtree(root1, subRoot1)); // Output: true
+console.log(isSubtree(root2, subRoot2)); // Output: false
