@@ -49,40 +49,29 @@ Interview Importance: ⭐⭐⭐ (Foundation level)
 ### Key Concepts
 
 Variables & Data Types
-
 Operators
-
 Conditionals
-
 Loops
-
 Functions
-
 Time & Space Complexity (Big-O)
 
 ### Must Practice Questions
 
 Reverse a number
-
 Check prime number
-
 Find factorial (iterative & recursive)
-
 Count digits in a number
 
 📂 02-patterns
 
 ### Definition
 Logical problems using nested loops to print structured outputs.
-
 Interview Importance: ⭐⭐ (Logical clarity)
 
 ### Key Concepts
 
 Nested loops
-
 Symmetry logic
-
 Index manipulation
 
 ### Must Practice Questions
