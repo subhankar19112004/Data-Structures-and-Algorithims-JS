@@ -45,6 +45,17 @@ const searchInBST = (root, val) => {
   return ans;
 };
 
+// Buttom-up approach
+var searchBST = function (root, val) {
+  if (!root) return null;
+
+  if (root.val == val) return root;
+
+  return root.val < val
+    ? searchBST(root.right, val)
+    : searchBST(root.left, val);
+};
+
 // Test cases for all examples
 const root1 = new TreeNode(4, new TreeNode(2, new TreeNode(1), new TreeNode(3)), new TreeNode(7));
 const val1 = 2;
@@ -52,3 +63,6 @@ console.log(searchInBST(root1, val1)); // Output: [2,1,3]
 const root2 = new TreeNode(4, new TreeNode(2, new TreeNode(1), new TreeNode(3)), new TreeNode(7));
 const val2 = 5;
 console.log(searchInBST(root2, val2)); // Output: null
+
+console.log(searchBST(root1, val1)); // Output: [2,1,3];
+console.log(searchBST(root2, val2)); // Output: null
