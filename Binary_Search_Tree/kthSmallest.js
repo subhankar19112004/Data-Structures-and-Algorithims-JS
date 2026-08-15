@@ -41,6 +41,21 @@ var kthSmallest = function (root, k) {
   return ans[k - 1]; // return k - 1 because the array is 0-indexed
 };
 
+// Another approach
+var kthSmallest1 = function (root, k) {
+  let count = k;
+  let ans = null;
+  function traversal(curr) {
+    if (ans !== null) return;
+    curr.left && traversal(curr.left);
+    --count;
+    if (count == 0) ans = curr.val;
+    curr.right && traversal(curr.right);
+  }
+  traversal(root);
+  return ans;
+};
+
 // Test cases for all examples
 const root1 = new TreeNode(
   3,
@@ -49,6 +64,7 @@ const root1 = new TreeNode(
 );
 const k1 = 1;
 console.log(kthSmallest(root1, k1)); // Output: 1
+console.log(kthSmallest1(root1, k1)); // Output: 1
 
 const root2 = new TreeNode(
   5,
@@ -57,3 +73,4 @@ const root2 = new TreeNode(
 );
 const k2 = 3;
 console.log(kthSmallest(root2, k2)); // Output: 3
+console.log(kthSmallest1(root2, k2)); // Output: 3
