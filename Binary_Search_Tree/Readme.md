@@ -1301,3 +1301,254 @@ Output:
 
 ---
 
+# 🎤 Interview Questions
+
+## 🟢 Beginner
+
+### 1. What is a Binary Search Tree?
+
+### 2. What is the difference between a Binary Tree and BST?
+
+### 3. What are the properties of a BST?
+
+### 4. Why does inorder traversal of a BST produce sorted values?
+
+### 5. What is the time complexity of searching in a BST?
+
+### 6. What is the worst-case time complexity of a BST?
+
+### 7. Can a BST be unbalanced?
+
+### 8. How do you find the minimum value in a BST?
+
+### 9. How do you find the maximum value in a BST?
+
+### 10. What are the different types of tree traversal?
+
+---
+
+# 🟡 Intermediate
+
+### 11. How do you insert a node into a BST?
+
+### 12. Explain the three cases of BST deletion.
+
+### 13. What is an inorder successor?
+
+### 14. What is an inorder predecessor?
+
+### 15. How do you find the Kth smallest element?
+
+### 16. How do you find the Kth largest element?
+
+### 17. How do you validate whether a tree is a BST?
+
+### 18. Why is checking only immediate children insufficient for BST validation?
+
+### 19. Can BST contain duplicate values?
+
+### 20. What happens when a BST becomes skewed?
+
+---
+
+# 🔴 Advanced
+
+### 21. Why does BST search have `O(log n)` average complexity?
+
+### 22. Why can BST search become `O(n)`?
+
+### 23. How can you convert a sorted array into a balanced BST?
+
+### 24. How do you find the Lowest Common Ancestor in a BST?
+
+### 25. How do you find the floor of a value in a BST?
+
+### 26. How do you find the ceiling of a value in a BST?
+
+### 27. How do you delete a node with two children?
+
+### 28. Why are self-balancing BSTs needed?
+
+### 29. What is the difference between an AVL Tree and a normal BST?
+
+### 30. What is the difference between a BST and a Red-Black Tree?
+
+### 31. Can you construct a BST from preorder traversal?
+
+### 32. Can inorder traversal alone uniquely construct a BST?
+
+### 33. How can a BST be used for sorting?
+
+### 34. What is Tree Sort?
+
+### 35. What is the relationship between BST height and operation complexity?
+
+---
+
+# 📝 BST Cheat Sheet
+
+## Core Rule
+
+```text
+            ROOT
+           /    \
+      Smaller   Greater
+```
+
+```text
+LEFT < ROOT < RIGHT
+```
+
+---
+
+## Traversals
+
+```text
+Inorder
+LEFT → ROOT → RIGHT
+        ↓
+   ASCENDING
+```
+
+```text
+Reverse Inorder
+RIGHT → ROOT → LEFT
+        ↓
+   DESCENDING
+```
+
+```text
+Preorder
+ROOT → LEFT → RIGHT
+```
+
+```text
+Postorder
+LEFT → RIGHT → ROOT
+```
+
+---
+
+## Searching
+
+```text
+target < current
+        ↓
+      LEFT
+```
+
+```text
+target > current
+        ↓
+      RIGHT
+```
+
+```text
+target === current
+        ↓
+      FOUND
+```
+
+---
+
+## Minimum & Maximum
+
+```text
+Minimum → Leftmost Node
+Maximum → Rightmost Node
+```
+
+---
+
+## Important Problems
+
+```text
+Kth Smallest  → Inorder
+Kth Largest   → Reverse Inorder
+Validate BST  → Bounds
+LCA           → Compare Values
+Floor         → Largest ≤ Target
+Ceiling       → Smallest ≥ Target
+```
+
+---
+
+## Complexity
+
+```text
+Balanced BST
+
+Search    → O(log n)
+Insert    → O(log n)
+Delete    → O(log n)
+```
+
+```text
+Skewed BST
+
+Search    → O(n)
+Insert    → O(n)
+Delete    → O(n)
+```
+
+---
+
+# 🚀 Final Takeaway
+
+The most important BST relationship to remember is:
+
+```text
+                  BST
+                   │
+          ┌────────┴────────┐
+          ↓                 ↓
+        LEFT              RIGHT
+          │                 │
+       Smaller            Greater
+          │                 │
+          └───────┬─────────┘
+                  ↓
+               INORDER
+                  ↓
+          SORTED ASCENDING
+```
+
+### The 5 rules you should remember
+
+1. **Left subtree contains smaller values.**
+2. **Right subtree contains greater values.**
+3. **The rule applies recursively to every subtree.**
+4. **Inorder traversal of a valid BST gives sorted ascending order.**
+5. **BST operations depend on height — balanced is `O(log n)`, skewed is `O(n)`.**
+
+> **BST = Binary Tree + Ordering Property**
+>
+> **Left < Root < Right**
+>
+> **Inorder → Sorted**
+>
+> **Reverse Inorder → Descending**
+>
+> **Operations → O(height)**
+
+---
+
+## 📌 Quick Revision
+
+```text
+                    BST
+                     │
+        ┌────────────┼────────────┐
+        │            │            │
+      Search       Insert       Delete
+        │            │            │
+       O(h)         O(h)         O(h)
+        │
+   ┌────┴────┐
+   │         │
+Balanced   Skewed
+   │         │
+O(log n)    O(n)
+```
+
+**Master these concepts and most standard BST interview problems become pattern-recognition problems rather than memorization problems.**
