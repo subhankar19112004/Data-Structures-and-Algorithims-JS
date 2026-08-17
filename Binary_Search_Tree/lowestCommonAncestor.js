@@ -36,6 +36,11 @@ function TreeNode(val, left, right) {
   this.right = right === undefined ? null : right;
 }
 
+// This can also be solved as the normal Binary tree LCA problem, but since this is a BST,
+// we can take advantage of the properties of BST to find the LCA in O(h) time complexity,
+// where h is the height of the tree.
+// But I recommend solving the normal Binary tree LCA problem first, and then come back to this problem to see how we can optimize it using the properties of BST.
+
 var lowestCommonAncestor = function (root, p, q) {
   if (p.val < root.val && q.val < root.val) {
     return lowestCommonAncestor(root.left, p, q);
