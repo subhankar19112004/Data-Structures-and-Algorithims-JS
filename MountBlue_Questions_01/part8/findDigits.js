@@ -23,6 +23,3 @@ console.log(findDigits(12)); // Output: 2
 console.log(findDigits(124)); // Output: 3
 console.log(findDigits(1024)); // Output: 3
 console.log(findDigits(716)); // Output: 1
-console.log("--------------------------------------------------")
-console.log(parseInt("1024"))
-console.log(Number("1024"))
