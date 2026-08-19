@@ -15,7 +15,6 @@
 
 
 function stringConstruction(s) {
-  // Write your code here
   let uniqueChars = new Set(s);
   return uniqueChars.size;
 }
