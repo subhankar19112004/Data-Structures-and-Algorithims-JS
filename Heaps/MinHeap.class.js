@@ -1,3 +1,7 @@
+// MinHeap implementation in JavaScript
+// A MinHeap is a complete binary tree where the value of each node is less than or equal to the values of its children. The smallest element is at the root of the tree.
+// The MinHeap is implemented using an array, where the parent-child relationship is defined by the indices of the array.
+
 class MinHeap {
   constructor() {
     this.heap = [5, 10, 20, 30];
@@ -75,6 +79,6 @@ class MinHeap {
 let newHeap = new MinHeap();
 newHeap.insert(1);
 console.log(newHeap.heap);
-console.log(newHeap.extract());
-console.log(newHeap.extract());
-console.log(newHeap.heap);
+console.log(newHeap.extract()); // 1
+console.log(newHeap.extract()); // 5
+console.log(newHeap.heap); // [10, 30, 20]
