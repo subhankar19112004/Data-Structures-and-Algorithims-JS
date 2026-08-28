@@ -21,6 +21,9 @@ const quickSort1Partition = (arr) => {
             equal.push(arr[i]);
         }
     }
+    console.log(left);
+    console.log(equal);
+    console.log(right);
 
     return [...left, ...equal, ...right];
 }
