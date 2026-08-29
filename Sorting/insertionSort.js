@@ -1,8 +1,9 @@
-function InsertionSort (a){
+// Insertion Sort Algorithm
+function InsertionSort(a) {
     let n = a.length;
 
     for( let i = 1; i < n; i++){
-        curr = a[i]; // current element
+        let curr = a[i]; // current element
         let prev = i - 1; // Declaring previous element 
         console.log(a)
         console.log("curr = " + curr + " prev = " + prev);
