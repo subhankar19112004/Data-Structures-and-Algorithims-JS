@@ -86,3 +86,5 @@ class MaxPriorityQueue {
     [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
   }
 }
+
+module.exports = MaxPriorityQueue;
