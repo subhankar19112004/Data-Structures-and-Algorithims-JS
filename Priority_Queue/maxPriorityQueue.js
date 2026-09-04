@@ -9,8 +9,8 @@ class MaxPriorityQueue {
   }
 
   // Enqueue an item
-  enqueue(value, priority) {
-    this.heap.push({ value, priority });
+  enqueue(value) {
+    this.heap.push(value);
     this.heapifyUp();
   }
 
@@ -19,7 +19,7 @@ class MaxPriorityQueue {
     let index = this.heap.length - 1;
     while (index > 0) {
       let parent = Math.floor((index - 1) / 2);
-      if (this.heap[index].priority <= this.heap[parent].priority) break;
+      if (this.heap[index] <= this.heap[parent]) break;
       this.swap(index, parent);
       index = parent;
     }
@@ -49,14 +49,14 @@ class MaxPriorityQueue {
 
       if (
         left < length &&
-        this.heap[left].priority > this.heap[largest].priority
+        this.heap[left] > this.heap[largest]
       ) {
         largest = left;
       }
 
       if (
         right < length &&
-        this.heap[right].priority > this.heap[largest].priority
+        this.heap[right] > this.heap[largest]
       ) {
         largest = right;
       }
