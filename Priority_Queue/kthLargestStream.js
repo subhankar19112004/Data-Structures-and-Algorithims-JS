@@ -20,7 +20,8 @@
 // kthLargest.add(9);   // return 8
 // kthLargest.add(4);   // return 8
 
-const MinPriorityQueue = require("./minPriorityQueue");
+const { MinPriorityQueue } = require("@datastructures-js/priority-queue");
+
 
 /**
  * @param {number} k
