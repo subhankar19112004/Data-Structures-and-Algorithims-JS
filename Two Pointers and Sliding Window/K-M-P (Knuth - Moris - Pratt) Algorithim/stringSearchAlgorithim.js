@@ -1,4 +1,5 @@
 // KMP (Knuth - Moris - Pratt) Algorithm for String Search
+
 // The KMP algorithm is an efficient string searching algorithm that uses the concept of longest prefix-suffix (LPS) to avoid unnecessary comparisons. 
 // It preprocesses the pattern (needle) to create an LPS array, which helps in determining how many characters can be skipped when a mismatch occurs during the search in the text (haystack).
 // Time Complexity: O(n + m) where n is the length of the haystack and m is the length of the needle
