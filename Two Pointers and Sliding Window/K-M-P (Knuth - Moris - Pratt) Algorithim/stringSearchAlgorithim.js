@@ -1,18 +1,19 @@
 // KMP (Knuth - Moris - Pratt) Algorithm for String Search
 
-// The KMP algorithm is an efficient string searching algorithm that uses the concept of longest prefix-suffix (LPS) to avoid unnecessary comparisons. 
+// The KMP algorithm is an efficient string searching algorithm that uses the concept of longest prefix-suffix (LPS) to avoid unnecessary comparisons.
 // It preprocesses the pattern (needle) to create an LPS array, which helps in determining how many characters can be skipped when a mismatch occurs during the search in the text (haystack).
 // Time Complexity: O(n + m) where n is the length of the haystack and m is the length of the needle
 // Space Complexity: O(m) for the LPS array
 // The KMP algorithm consists of two main steps:
 // 1. Build the LPS array for the needle.
 // 2. Use the LPS array to search for the needle in the haystack.
-// The LPS array is built by iterating through the needle and comparing characters. 
+// The LPS array is built by iterating through the needle and comparing characters.
 // If a match is found, the length of the longest prefix-suffix is updated. If a mismatch occurs, the algorithm uses the LPS array to determine how many characters can be skipped, thus avoiding redundant comparisons.
 // Example:
-// For the needle "abcab", the LPS array would be [0, 0, 0, 1, 2]. This means that for the prefix "a", 
+// For the needle "abcab", the LPS array would be [0, 0, 0, 1, 2]. This means that for the prefix "a",
 // there is no proper prefix-suffix, for "ab" there is no proper prefix-suffix, for "abc" there is no proper prefix-suffix, for "abca" the longest proper prefix-suffix is "a" (length 1), and for "abcab" the longest proper prefix-suffix is "ab" (length 2). This information allows the KMP algorithm to efficiently search for the needle in the haystack.
 // The KMP algorithm is particularly useful for searching for patterns in large texts, as it significantly reduces the number of comparisons needed compared to naive string searching algorithms.
+
 
 const stringSearchAlgorithim = (haystack, needle) => {
     // Build the LPS array for the needle
