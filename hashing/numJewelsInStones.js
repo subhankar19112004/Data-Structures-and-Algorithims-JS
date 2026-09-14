@@ -29,6 +29,8 @@ var numJewelsInStones = function (jewels, stones) {
   return count;
 };
 
+// We can also solve this problem using a Set to store the jewels and then iterate through the stones to count how many of them are jewels. This approach has a time complexity of O(n + m) and space complexity of O(m), where n is the length of the stones string and m is the length of the jewels string.
+
 // Time Complexity: O(n + m) - We traverse the stones string once to create the map, where n is the length of the stones string. Then we traverse the jewels string once to count the number of jewels in stones, where m is the length of the jewels string.
 // Space Complexity: O(n) - We use a map to store the count of each stone, which can take up to n space in the worst case, where n is the length of the stones string.
 
