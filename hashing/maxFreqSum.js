@@ -36,10 +36,7 @@ var maxFreqSum = function (s) {
 };
 
 // Time Complexity: O(n) - We traverse the string s once to create the map, where n is the length of the string s. Then we traverse the map keys once to find the maximum frequency of vowels and consonants.
-// Space Complexity: O(n) - We use a map to store the count of each character, which can take up to n space in the worst case, where n is the length of the string s.
-
-// Test Cases
-console.log(maxFreqSum("abca")); // 3
+// Space Complexity: O(1) - o(1) bcoz the map can only have a maximum of 26 keys (one for each lowercase English letter), which is a constant space.
 console.log(maxFreqSum("abcde")); // 2
 console.log(maxFreqSum("aeiou")); // 1
 console.log(maxFreqSum("bcdfg")); // 1
