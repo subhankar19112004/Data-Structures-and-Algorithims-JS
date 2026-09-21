@@ -38,3 +38,37 @@ var groupAnagrams = function (strs) {
 console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
 console.log(groupAnagrams([""]));
 console.log(groupAnagrams(["a"]));
+
+// Approach 2: Use character count as a key in a hash map.
+var groupAnagrams1 = function (strs) {
+  let map = {};
+  for (let i = 0; i < strs.length; i++) {
+    let freqArr = Array(26).fill(0);
+    let s = strs[i];
+
+    for (let j = 0; j < s.length; j++) {
+      let index = s[j].charCodeAt() - "a".charCodeAt();
+      ++freqArr[index];
+    }
+
+    let key = "";
+    for (let k = 0; k < 26; k++) {
+      key = key + String.fromCharCode(k) + freqArr[k];
+    }
+
+    if (!map[key]) {
+      map[key] = [strs[i]];
+    } else {
+      map[key].push(strs[i]);
+    }
+  }
+  return [...Object.values(map)];
+};
+
+// Time Complexity: O(NK), where N is the length of strs, and K is the maximum length of a string in strs.
+// Space Complexity: O(NK), the total information content stored in ans.
+
+// Test cases
+console.log(groupAnagrams1(["eat", "tea", "tan", "ate", "nat", "bat"]));
+console.log(groupAnagrams1([""]));
+console.log(groupAnagrams1(["a"]));
