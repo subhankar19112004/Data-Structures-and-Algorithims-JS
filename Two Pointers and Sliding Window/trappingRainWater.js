@@ -11,28 +11,27 @@ const trappingRainWater = (height) => {
   let n = height.length;
 
   // Findinf Max from Left for a particular index
-//   let maxL = [];
-//   maxL[0] = height[0];
-//   for (let i = 1; i < n; i++) {
-//     maxL[i] = Math.max(height[i], maxL[i - 1]);
-//   }
+  //   let maxL = [];
+  //   maxL[0] = height[0];
+  //   for (let i = 1; i < n; i++) {
+  //     maxL[i] = Math.max(height[i], maxL[i - 1]);
+  //   }
 
   // Finding Max from Right for a particular index
-//   let maxR = [];
-//   maxR[n - 1] = height[n - 1];
-//   for (let i = n - 2; i >= 0; i--) {
-//     maxR[i] = Math.max(height[i], maxR[i + 1]);
-//   }
+  //   let maxR = [];
+  //   maxR[n - 1] = height[n - 1];
+  //   for (let i = n - 2; i >= 0; i--) {
+  //     maxR[i] = Math.max(height[i], maxR[i + 1]);
+  //   }
 
-  // Approach 2 : Using one loop to find maxL and maxR 
+  // Approach 2 : Using one loop to find maxL and maxR
   let maxL = [];
   let maxR = [];
   maxR[n - 1] = height[n - 1];
-  maxL[0] = height[0];    
+  maxL[0] = height[0];
   for (let i = 1; i < n; i++) {
     maxL[i] = Math.max(height[i], maxL[i - 1]);
-    maxR[n - 1 - i] = Math.max(height[n - 1 - i ], maxR[n - i]);
-
+    maxR[n - 1 - i] = Math.max(height[n - 1 - i], maxR[n - i]);
   }
 
   // Finding the total water trapped
