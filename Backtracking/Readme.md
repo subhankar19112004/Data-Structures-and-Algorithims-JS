@@ -1,4 +1,4 @@
-# Backtracking  🧠 🔙
+# Backtracking  🧠 
 
 > **Goal:** Understand Backtracking so well that you can recognize the
 > pattern, build the recursion, and solve interview questions without
@@ -12,6 +12,23 @@ the core idea is actually very simple:
 Think of yourself standing at a decision point. You choose one option,
 go deeper, and if that path does not work, you come back and choose
 another option.
+
+# Backtracking Quotes & Proverbs
+
+## Proverb & Idiom Style
+* **Undo to move forward.**
+* **Fail early, turn back quickly.**
+* **No path is a dead end if you can retrace your steps.**
+* **Mistakes are just markers to turn around.**
+* **Explore all paths, commit to none early.**
+
+## Code & Logic Style
+* **Try, fail, undo, repeat.**
+* **Pruning the branch saves the tree.**
+* **Look ahead, but remember the way back.**
+* **Test the choice, erase the mistake.**
+* **Depth first, regrets later.**
+
 
 ------------------------------------------------------------------------
 
