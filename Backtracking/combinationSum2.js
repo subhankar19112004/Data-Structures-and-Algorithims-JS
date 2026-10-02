@@ -28,7 +28,7 @@ var combinationSum2 = (arr, target) => {
         if (remainingTarget === 0) result.push([...path]);
         if (remainingTarget <= 0) return;
 
-        for (let i = start; i < arr.length && arr[i] <= remainingTarget; i++) {
+        for (let i = start; i < arr.length && arr[i] <= remainingTarget; i++) { // We are using arr[i] <= remainingTarget bcoz we want to avoid unnecessary iterations when the current candidate exceeds the remaining target.
             if (i > start && arr[i] === arr[i - 1]) continue;
             path.push(arr[i]);
             backtrack(remainingTarget - arr[i], path, i + 1);
