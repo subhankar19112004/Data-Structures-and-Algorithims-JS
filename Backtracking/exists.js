@@ -20,6 +20,11 @@
 // Left: (x, y - 1)
 // Right: (x, y + 1)
 
+// Grid Structure : 
+// A B C E
+// S F C S
+// A D E E
+
 var exists = function (board, word) {
     let result = false;
     let m = board.length;
