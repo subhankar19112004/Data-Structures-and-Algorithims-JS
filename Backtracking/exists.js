@@ -58,7 +58,7 @@ var exists = function (board, word) {
         if( y < n - 1 && board[x][y + 1] === word[newIndex]) {
             backtrack(x, y + 1, newIndex + 1);
         }
-        board[x][y] = temp; // Restore the cell
+        board[x][y] = temp; // Restore the cell from hash to original number
     }
     for (let i = 0; i < m; i++) {
         for (let j = 0; j < n; j++) {
