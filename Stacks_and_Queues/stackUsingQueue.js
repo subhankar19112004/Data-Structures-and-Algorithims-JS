@@ -1,3 +1,4 @@
+// Leetcode 225. Implement Stack using Queues
 // Implement stack using two queues. The operations of stack should be supported by using only the standard operations of a queue -- which means only push to back, peek/pop from front, size, and is empty operations are valid.
 // Applying the above operations, implement a last-in-first-out (LIFO) stack using queues. You must use only standard operations of a queue, which means that only push to back, peek/pop from front, size and is empty operations are valid.
 var MyStack = function () {
@@ -65,7 +66,9 @@ MyStack.prototype.empty = function () {
  */
 
 
-// Implement stack using one queue. The operations of stack should be supported by using only the standard operations of a queue -- which means only push to back, peek/pop from front, size, and is empty operations are valid.
+// Implement stack using one queue. 
+// The operations of stack should be supported by using only the standard operations of a queue -- which means only push to back, 
+// peek/pop from front, size, and is empty operations are valid.
 
 
 var MyStack = function() {
