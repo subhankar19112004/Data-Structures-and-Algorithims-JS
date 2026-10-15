@@ -1,9 +1,25 @@
-// 1021. Remove Outermost Parentheses
-// Given a valid parentheses string s, 
-// consider its primitive decomposition: s = P_1 + P_2 + ... + P_k, 
+// Leetcode 1021. Remove Outermost Parentheses
+// Given a valid parentheses string s,
+// consider its primitive decomposition: s = P_1 + P_2 + ... + P_k,
 // where P_i are primitive valid parentheses strings.
-// Return s after removing the outermost parentheses of every primitive string in the 
+// Return s after removing the outermost parentheses of every primitive string in the
 // primitive decomposition of s.
+
+// Example 1:
+// Input: s = "(()())(())"
+// Output: "()()()"
+// Explanation: The input string is "(()())(())", with primitive decomposition "(()())" + "(())".
+// After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
+// Example 2:
+// Input: s = "(()())(())(()(()))"
+// Output: "()()()()(())"
+// Explanation: The input string is "(()())(())(()(()))", with primitive decomposition "(()())" + "(())" + "(()(()))".
+// After removing outer parentheses of each part, this is "()()" + "()" + "()(())" = "()()()()(())".
+// Example 3:
+// Input: s = "()()"
+// Output: ""
+// Explanation: The input string is "()()", with primitive decomposition "()" + "()".
+// After removing outer parentheses of each part, this is "" + "" = "".
 
 //Approach 1: Using Stack
 const removeOuterParentheses = (s) => {
@@ -50,6 +66,10 @@ const removeOuterParentheses2 = (s) => {
     return ans;
 }
 
+// Time Complexity : O(n) where n is the length of the string s, since we are iterating through the string once.
+// Space Complexity : O(1) where n is the length of the string s, since we are using a single variable to store the count.
+
+// Test Cases
 console.log(removeOuterParentheses("(()())(())"));
 console.log(removeOuterParentheses("(()())(())(()(()))"));
 console.log(removeOuterParentheses("()()")); 
