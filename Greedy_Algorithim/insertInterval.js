@@ -49,6 +49,9 @@ const insertInterval = (arr, x) => {
   return ans;
 };
 
+// Time Complexity: O(n), where n is the number of intervals in the input array. We iterate through the intervals once, performing constant-time operations for each interval.
+// Space Complexity: O(n), where n is the number of intervals in the input array. In the worst case, we may need to store all the intervals in the output array, resulting in a space complexity of O(n).
+
 // Test cases
 console.log(insertInterval([[1, 3], [6, 9]], [2, 5]));
 console.log(insertInterval([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8]));
