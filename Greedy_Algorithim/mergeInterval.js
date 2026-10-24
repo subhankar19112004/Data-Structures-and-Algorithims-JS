@@ -12,8 +12,6 @@
 // Output: [[1,5]]
 // Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
-// Time Complexity: O(n log n), where n is the number of intervals in the input array. The sorting step takes O(n log n) time, and the merging step takes O(n) time.
-// Space Complexity: O(n), where n is the number of intervals in the input array. In the worst case, we may need to store all the intervals in the output array, resulting in a space complexity of O(n).
 
 var mergeInterval = function (arr) {
   arr.sort((a, b) => a[0] - b[0]);
@@ -29,6 +27,12 @@ var mergeInterval = function (arr) {
   }
   return ans;
 };
+
+
+
+// Time Complexity: O(n log n), where n is the number of intervals in the input array. The sorting step takes O(n log n) time, and the merging step takes O(n) time.
+// Space Complexity: O(n), where n is the number of intervals in the input array. In the worst case, we may need to store all the intervals in the output array, resulting in a space complexity of O(n).
+
 
 // Test cases
 console.log(mergeInterval([[1, 3], [2, 6], [8, 10], [15, 18]]));
