@@ -6,9 +6,14 @@
 // -1 : My number is lower
 // 1 : My number is higher
 // 0 : Congrats! You got it!
+
 // Example:
 // Input: n = 10, pick = 6
 // Output: 6
+
+// Example 2:
+// Input: n = 1, pick = 1
+// Output: 1
 
 // Guess API
 function guess(num) {
@@ -47,3 +52,10 @@ function guessNumber(n) {
     }
     return -1;
 }
+
+// Time Complexity: O(log n), where n is the range of numbers. We are using binary search to narrow down the possible numbers.
+// Space Complexity: O(1), as we are using a constant amount of extra space regardless of the input size.
+
+// Test cases
+console.log(guessNumber(100));
+console.log(guessNumber(1));
