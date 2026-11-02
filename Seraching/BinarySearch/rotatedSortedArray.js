@@ -1,4 +1,4 @@
-//Leetcode 33. Search in Rotated Sorted Array
+// Leetcode 33. Search in Rotated Sorted Array
 // Suppose an array of length n sorted in ascending order is rotated between 1 and n times.
 // For example, the array nums = [0,1,2,4,5,6,7] might become:
 // [4,5,6,7,0,1,2] if it was rotated 4 times.
@@ -18,12 +18,16 @@ const rotatedSortedArray = (arr, target) => {
 
         if (arr[left] <= arr[mid]) {
             if (target >= arr[left] && target < arr[mid]) {
+                // If target is at the left boundary
+                if (target == arr[left]) return left;
                 right = mid - 1;
             } else {
                 left = mid + 1;
             }
         } else {
-            if(target > arr[mid] && target <= arr[right]){
+            if (target > arr[mid] && target <= arr[right]) {
+                // If target is at the right boundary
+                if (target == arr[right]) return right;
                 left = mid + 1;
             } else {
                 right = mid - 1;
@@ -32,6 +36,9 @@ const rotatedSortedArray = (arr, target) => {
     }
     return -1;
 }
+
+// Time Complexity: O(log n), where n is the number of elements in the array. We are using binary search to narrow down the possible indices.
+// Space Complexity: O(1), as we are using a constant amount of extra space regardless of the input size.
 
 // Example usage:
 const arr = [4, 5, 6, 7, 0, 1, 2];
