@@ -25,6 +25,16 @@ const peakElement = (arr) => {
     return left;
 }
 
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
+
+// Note : This is not the algorithim for finding the maximum element in an array.
+// This is the algorithim for finding a peak element in an array. 
+// A peak element is an element that is strictly greater than its neighbors. 
+// The maximum element in an array is the largest element in the array. 
+// The peak element can be any element that is greater than its neighbors, 
+// not necessarily the largest element in the array.
+
 //Test Cases
 console.log(peakElement([1, 2, 3, 1]));
 console.log(peakElement([1, 2, 1, 3, 5, 6, 4]));
