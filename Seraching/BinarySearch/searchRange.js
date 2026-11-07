@@ -20,7 +20,7 @@
 // Time Complexity: O(log n)
 // space Complexity: O(1)
 
-// Approach 1
+// Approach 1 -> This approach uses two binary searches to find the first and last occurrence of the target value in the sorted array. The first binary search finds the leftmost index of the target, while the second binary search finds the rightmost index. If the target is not found, it returns [-1, -1].
 const searchRange = (arr, target) => {
     if (arr.length == 1 && target == arr[0]) return [0, 0];
     let left = 0;
@@ -65,7 +65,7 @@ console.log(searchRange([1], 1));
 
 console.log("------------------------------------------------------------------------")
 
-// Approach 2
+// Approach 2 -> This approach also uses two binary searches to find the first and last occurrence of the target value in the sorted array. The first binary search finds the leftmost index of the target, while the second binary search finds the rightmost index. If the target is not found, it returns [-1, -1]. This approach is more straightforward and easier to understand.
 function searchRange2 (arr, target){
     if(arr.length == 1 && arr[0] == target) return [0, 0];
     let left = 0;
