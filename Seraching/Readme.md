@@ -98,6 +98,8 @@ Element found at index: 2
 | Average Case | O(n) | O(log n) |
 | Worst Case | O(n) | O(log n) |
 
+
+
 **Conclusion:**
 
 - Linear Search is suitable for small datasets and unsorted arrays.
