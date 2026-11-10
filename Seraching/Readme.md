@@ -101,7 +101,6 @@ Element found at index: 2
 
 
 **Conclusion:**
-
 - Linear Search is suitable for small datasets and unsorted arrays.
 - Binary Search is more efficient for large datasets when the data is sorted.
 - Binary Search reduces the search space by half in every iteration, making it significantly faster than Linear Search for large datasets.
