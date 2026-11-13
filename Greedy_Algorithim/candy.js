@@ -16,6 +16,10 @@
 // Explanation: You can allocate to the first, second and third child with 1, 2, 1 candies respectively.
 // The third child gets 1 candy because it satisfies the above two conditions.
 
+let arr1 = [1, 0, 2];
+let arr2 = [1, 2, 2];
+let arr3 = [1, 2, 3, 4, 5, 3, 2, 1, 2, 6, 5, 4, 3, 3, 2, 1, 1, 3, 3, 3, 4, 2];
+
 
 // Approac 1: Two Passes
 var candy = function (arr) {
@@ -46,7 +50,48 @@ var candy = function (arr) {
 // Time Complexity: O(n) where n is the number of children.
 // Space Complexity: O(n) where n is the number of children.
 
-// Test Cases
-console.log(candy([1, 0, 2]));
-console.log(candy([1, 2, 2]));
-console.log(candy([1, 2, 3, 4, 5, 3, 2, 1, 2, 6, 5, 4, 3, 3, 2, 1, 1, 3, 3, 3, 4, 2]))
+// Approach 2: One Pass
+var candyOnePass = function (arr) {
+    let n = arr.length;
+    let ans = n;
+
+    let i = 1;
+    while (i < n) {
+        if (arr[i] == arr[i - 1]) {
+            ++i;
+            continue;
+        }
+
+        let up = 0;
+        while (i < n && arr[i] > arr[i - 1]) {
+            ++up;
+            ans = ans + up;
+            ++i;
+        }
+
+        let down = 0;
+        while (i < n && arr[i] < arr[i - 1]) {
+            ++down;
+            ans = ans + down;
+            ++i;
+        }
+
+        ans = ans - Math.min(up, down);
+    }
+    return ans;
+};
+
+// Time Complexity: O(n) where n is the number of children.
+// Space Complexity: O(1) where n is the number of children.
+
+// Test Cases for approach 1
+console.log(candy(arr1));
+console.log(candy(arr2));
+console.log(candy(arr3));
+
+console.log("---------------------------------------");
+
+// Test Cases for approach 2
+console.log(candyOnePass(arr1));
+console.log(candyOnePass(arr2));
+console.log(candyOnePass(arr3));
