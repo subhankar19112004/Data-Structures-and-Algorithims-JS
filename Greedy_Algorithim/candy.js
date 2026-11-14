@@ -1,4 +1,4 @@
-// Leetcode 135. Candy
+// Leetcode 135. Candy (hard)
 // There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings.
 // You are giving candies to these children subjected to the following requirements:
 // Each child must have at least one candy.
