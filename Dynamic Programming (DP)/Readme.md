@@ -1,4 +1,4 @@
-# Dynamic Programming (DP)
+# Dynamic Programming (DP) (Intelligently Lazy)
 
 > **Dynamic Programming is not a data structure. It is an algorithmic
 > optimization technique.**\
