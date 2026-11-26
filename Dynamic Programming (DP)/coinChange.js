@@ -68,3 +68,30 @@ console.log(coinChange(coins1, amount1));
 console.log(coinChange(coins2, amount2));
 console.log(coinChange(coins3, amount3));
 console.log(coinChange(coins4, amount4));
+
+// Tabulation - Bottom Up Approach (Iterative)
+var coinChangeTabulation = function (coins, amount) {
+    let n = coins.length;
+    let dp = new Array(amount + 1).fill(Infinity);
+    dp[0] = 0;
+
+    for (let rem = 1; rem <= amount; rem++) {
+        for (let j = 0; j < n; j++) {
+            let remaining = rem - coins[j];
+            if (remaining >= 0) {
+                dp[rem] = Math.min(dp[rem], 1 + dp[remaining]);
+            }
+        }
+    }
+    return dp[amount] === Infinity ? -1 : dp[amount];
+};
+
+// Time Complexity: O(n * amount)
+// Space Complexity: O(amount) - for the dp array
+
+// Test Cases
+console.log(coinChangeTabulation(coins, amount));
+console.log(coinChangeTabulation(coins1, amount1));
+console.log(coinChangeTabulation(coins2, amount2));
+console.log(coinChangeTabulation(coins3, amount3));
+console.log(coinChangeTabulation(coins4, amount4));
